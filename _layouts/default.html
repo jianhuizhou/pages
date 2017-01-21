@@ -5,20 +5,232 @@
 <title>{{ page.title }}</title>
 <link rel="stylesheet" href="//jquery.com/jquery-wp-content/themes/jquery.com/style.css">
 <style type="text/css">
-	* {margin:0;padding:0;}
-	header {background:#000;}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {    
+		margin: 0;
+		padding: 0;
+		background-color: #f4ede3;
+		font-family: verdana,Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	.clear {
+		clear: both;
+	}
+	div {
+		background-color: Transparent;
+	}
+	ul {
+		word-break: break-all;
+	}
+	li {
+		list-style: none;
+	}
+	a:link {
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: none
+	}
+
+	a:visited {
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: none
+	}
+
+	a:hover {
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: underline
+	}
+
+	a:active {
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: none
+	}
+	#home {
+	    position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		border: none;
+		padding: 0;
+		background-color: #f4ede3;
+		background-image: url("http://www.cnblogs.com/skins/MountainInk/top.jpg");
+		background-position: top center;
+		background-repeat: no-repeat;
+		font-family: 微软雅黑;
+	}
+	#header {
+		position: relative;
+		top: 0;
+		left: auto;
+		width: 950px;
+		height: 310px;
+		margin: auto;
+		border: none;
+		padding: 0;
+		background: none;
+	}
+	#blogTitle {
+		position: relative;
+		top: 130px;
+		left: 0;
+		width: 740px;
+		height: 75px;
+		margin: 0;
+		border: none;
+		padding: 0;
+		background: none;
+	}
+	#blogTitle h1 {
+		float: left;
+		margin: 0;
+		border: none;
+		padding: 0;
+		font-size: 36px;
+		font-weight: normal;
+		font-family:微软雅黑,幼圆;
+	}
+	#blogTitle h2{
+		float: left;
+		width: 740px;
+		margin: 0;
+		border: none;
+		padding: 0;
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 18px;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	#mainContent{
+		float: right;
+	}
+	#mainContent .forFlow {
+		background-position: right top;
+	}
+	#sideBar {
+		width: 205px;
+		height: auto;
+		float: left;
+	}
+	#navigator {
+		position: relative;
+		top: 150px;
+		left: 0;
+		height: 40px;
+		clear: both;
+	}
+	#navList li {
+		float: left;
+	}
+	#navList a:link, #navList a:visited, #navList a:active {
+		color: #555;
+	}
+	#navList a {
+		display: block;
+		width: 70px;
+		height: 31px;
+		float: left;
+		text-align: center;
+		padding-top: 9px;
+		font-size: 14px;
+		font-family: 微软雅黑,微软雅黑,微软雅黑,微软雅黑;
+	}
+	.blogStats {
+		float: right;
+		margin: 0;
+		border: none;
+		padding: 0;
+		background: none;
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	#main {
+		position: relative;
+		top: 0;
+		left: auto;
+		width: 950px;
+		height: auto;
+		margin: auto;
+		border: none;
+		padding-right: 0;
+	}
+	#footer {
+		position: relative;
+		top: 0;
+		left: auto;
+		width: 950px;
+		height: auto;
+		margin: auto;
+		border: none;
+		padding: 30px 0 30px 0;
+		background: none;
+		color: #666;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size: 14px;
+		font-weight: normal;
+		text-decoration: none;
+		text-align: center
+	}
 </style>
 </head>
 <body>
-<header>详情页</header>
-<main>
-{{ content }}
-</main>
-<footer></footer>
+<div id="home">
+	<div id="header">
+		<div id="blogTitle">
+			<h1>周建辉</h1>
+			<h2>记忆.记录.</h2>
+		</div>
+		<div id="navigator">
+			<ul id="navList">
+				<li><a class="menu" href="/">首页</a></li>
+				<li><a class="menu" href="/">文章</a></li>
+			</ul>
+		<div class="blogStats">
+			<div id="blog_stats">
+				<span id="stats_article_count">联系</span>
+				<span id="stats-comment_count">评论 - 11</span>
+			</div>
+		</div><!--end: blogStats -->
+	</div>
+	</div>
+	<div id="main">
+		<div id="mainContent">
+			<div class="forFlow">
+			{{ content }}
+			</div>
+		</div>
+		<div id="sideBar">
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer">
+	</div>
+</div>
 <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 <script>
 	$(function(){
-		$(header).html("test");
+		//$(header).html("test");
 	});
 </script>
 </body>
