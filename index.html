@@ -2,8 +2,10 @@
 layout: default
 ---
 <div class="topicList">文章列表</div>
-<ul>
-　　{% for post in site.posts %}
-　　　　<li>{{ post.date | date_to_string }} <a class="topicTitle" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　　{% endfor %}
-</ul>
+<div>
+	<ul>
+	　　{% for post in site.posts %}
+	　　<li><a class="topicTitle" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{{ post.date | date_to_string }} </li>
+	　　{% endfor %}
+	</ul>
+</div>
