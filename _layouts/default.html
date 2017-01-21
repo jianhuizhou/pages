@@ -175,6 +175,14 @@
 		border: none;
 		padding-right: 0;
 	}
+	#topics {
+		position: relative;
+		width: 710px;
+		height: auto;
+		margin: 0;
+		border: none;
+		padding: 0;
+	}
 	#footer {
 		position: relative;
 		top: 0;
@@ -217,7 +225,9 @@
 	<div id="main">
 		<div id="mainContent">
 			<div class="forFlow">
-			{{ content }}
+				<div id="topics">
+				{{ content }}
+				</div>
 			</div>
 		</div>
 		<div id="sideBar">
